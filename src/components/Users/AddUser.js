@@ -53,7 +53,7 @@ const AddUser = (props) => {
           onConfirm={errorHandler}
         />
       )}
-      <Card key="add-user-card" className={classes.input}>
+      <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
           <input
