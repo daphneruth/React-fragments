@@ -6,6 +6,7 @@ import classes from './ErrorModal.module.css';
 
 const ErrorModal = (props) => {
   return (
+    
     <React.Fragment>
       <div className={classes.backdrop} onClick={props.onConfirm} />
       <Card className={classes.modal}>
