@@ -6,7 +6,6 @@
       <React.Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-      
-    </React.Fragment>
+       </React.Fragment>
   
 
