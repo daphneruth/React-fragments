@@ -28,11 +28,12 @@ const ModalOverlay= (props) => {
 const ErrorModal = (props) => {
   return (
     
+
     <React.Fragment>
-     
-     {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />
-     )}
-    </React.Fragment>
+    
+    {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById('backdrop-root'))}
+    
+      </React.Fragment>
   );
 };
 
