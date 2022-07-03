@@ -1,4 +1,4 @@
-import React, { useState ,useRef} from 'react';
+import React, { useState, useRef} from 'react';
 
 import Card from '../UI/Card';
 import Button from '../UI/Button';
@@ -9,11 +9,13 @@ const AddUser = (props) => {
 const nameInputRef = useRef();
 const aageInputRef = useRef();
 
-  const [enteredUsername, setEnteredUsername] = useState('');
-  const [enteredAge, setEnteredAge] = useState('');
+  //const [enteredUsername, setEnteredUsername] = useState('');
+  //const [enteredAge, setEnteredAge] = useState('');
+
   const [error, setError] = useState();
 
   const addUserHandler = (event) => {
+
     event.preventDefault();
     const enteredName= nameInputRef.current.value;
     const enteredUserAge= ageInputRef.current.value;
@@ -31,18 +33,18 @@ const aageInputRef = useRef();
       });
       return;
     }
-    props.onAddUser(enteredUsername, enteredAge);
-    setEnteredUsername('');
-    setEnteredAge('');
+    props.onAddUser(enteredName, enteredUserAge);
+    //setEnteredUsername('');
+    //setEnteredAge('');
   };
 
-  const usernameChangeHandler = (event) => {
-    setEnteredUsername(event.target.value);
-  };
+  //const usernameChangeHandler = (event) => {
+    //setEnteredUsername(event.target.value);
+ // };
 
-  const ageChangeHandler = (event) => {
-    setEnteredAge(event.target.value);
-  };
+  //const ageChangeHandler = (event) => {
+    //setEnteredAge(event.target.value);
+  //};
 
   const errorHandler = () => {
     setError(null);
@@ -64,16 +66,16 @@ const aageInputRef = useRef();
           <input
             id="username"
             type="text"
-            value={enteredUsername}
-            onChange={usernameChangeHandler}
+            //value={enteredUsername}
+           // onChange={usernameChangeHandler}
             ref={nameInputRef}
           />
           <label htmlFor="age">Age (Years)</label>
           <input
             id="age"
             type="number"
-            value={enteredAge}
-            onChange={ageChangeHandler}
+           // value={enteredAge}
+            //onChange={ageChangeHandler}
             ref={aageInputRef}
           />
           <Button type="submit">Add User</Button>
