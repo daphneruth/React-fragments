@@ -15,6 +15,8 @@ const aageInputRef = useRef();
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    const entereName= nameInputRef.current.value;
+    const enteredUserAge= ageInputRef.current.value;
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({
         title: 'Invalid input',
