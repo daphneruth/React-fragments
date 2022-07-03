@@ -64,6 +64,7 @@ const aageInputRef = useRef();
             type="text"
             value={enteredUsername}
             onChange={usernameChangeHandler}
+            ref={nameInputRef}
           />
           <label htmlFor="age">Age (Years)</label>
           <input
@@ -71,6 +72,7 @@ const aageInputRef = useRef();
             type="number"
             value={enteredAge}
             onChange={ageChangeHandler}
+            ref={aageInputRef}
           />
           <Button type="submit">Add User</Button>
         </form>
