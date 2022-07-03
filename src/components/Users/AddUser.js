@@ -34,6 +34,8 @@ const aageInputRef = useRef();
       return;
     }
     props.onAddUser(enteredName, enteredUserAge);
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = '';
     //setEnteredUsername('');
     //setEnteredAge('');
   };
