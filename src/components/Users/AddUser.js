@@ -15,16 +15,16 @@ const aageInputRef = useRef();
 
   const addUserHandler = (event) => {
     event.preventDefault();
-    const entereName= nameInputRef.current.value;
+    const enteredName= nameInputRef.current.value;
     const enteredUserAge= ageInputRef.current.value;
-    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+    if (enteredName.trim().length === 0 || enteredUserAge.trim().length === 0) {
       setError({
         title: 'Invalid input',
         message: 'Please enter a valid name and age (non-empty values).',
       });
       return;
     }
-    if (+enteredAge < 1) {
+    if (+enteredUserAge < 1) {
       setError({
         title: 'Invalid age',
         message: 'Please enter a valid age (> 0).',
