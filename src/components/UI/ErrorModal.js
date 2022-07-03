@@ -1,5 +1,5 @@
 import React from 'react';
-
+import  ReactDOM  from 'react-dom';
 import Card from './Card';
 import Button from './Button';
 import classes from './ErrorModal.module.css';
@@ -30,7 +30,8 @@ const ErrorModal = (props) => {
     
     <React.Fragment>
      
-     
+     {ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />
+     )}
     </React.Fragment>
   );
 };
